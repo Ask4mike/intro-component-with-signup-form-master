@@ -17,7 +17,7 @@ This is a solution to the [Intro component with signup challenge on Frontend Men
 
 ### Screenshot
 
-![](/intro-component-with-signup-form-master/images/Intro-component-with-signup-form.png)
+![](/intro-component-with-signup-form-master/Intro-component-with-signup-form.png)
 
 ## My process
 
