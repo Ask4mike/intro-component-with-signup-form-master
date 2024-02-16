@@ -1,0 +1,48 @@
+//function to store the entire form class in a variable
+const validateForm = (formSelector) => {
+  const formElement = document.querySelector(formSelector);
+
+  //Function to validate if the values given in the inputs meet the criteria
+  const validationOptions = [
+    {
+      attribute: "required",
+      firstnameId: "#firstName",
+      isValid: (input) => input.value.trim() !== "",
+      errorMessage: (input, firstnameId) => `${firstnameId} cannot be empty`,
+    },
+  ];
+
+  //Function to validate each of the formGroups in the Html file
+  const validateSingleFormGroup = (formGroup) => {
+    const input = formGroup.querySelector("input");
+    const imageIcon = formGroup.querySelector(".error_icon");
+    const errorContainer = formGroup.querySelector(".error");
+
+    for (const option of validationOptions) {
+      if (input.hasAttribute() && !option.isValid(input)) {
+        errorContainer.textContent = option.errorMessage(input, firstnameId);
+      }
+    }
+  };
+
+  //Removes the normal html form validation set in the html file
+  formElement.setAttribute("novalidate", "");
+
+  formElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+    validateAllFormGroups(formElement);
+  });
+
+  const validateAllFormGroups = (formToValidate) => {
+    const formGroups = Array.from(
+      formToValidate.querySelectorAll(".formGroup")
+    );
+
+    //Looping through the array of the formGroups from the form selected in the HTML
+    formGroups.forEach((formGroup) => {
+      validateSingleFormGroup(formGroup);
+    });
+  };
+};
+
+validateForm("#registrationForm");

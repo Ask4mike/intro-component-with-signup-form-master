@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CSS Variables  */
+:root {
+  /* primary colors */
+  --clr-red: hsl(0, 100%, 74%);
+  --clr-green: hsl(154, 59%, 51%);
+  /* accent colors */
+  --clr-blue: hsl(248, 32%, 49%);
+  /* neutral colors */
+  --clr-dark-blue: hsl(249, 11%, 12%);
+  --clr-grayish-blue: hsl(246, 25%, 77%);
+  /* font family */
+  --ff-poppins: "Poppins", sans-serif;
+  /* font size */
+  --fs-small: 1rem;
+}
+
+body {
+  background: url(/intro-component-with-signup-form-master/images/bg-intro-mobile.png)
+    var(--clr-red);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-small);
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 5rem auto;
+}
+
+.hero__text {
+  text-align: center;
+  /* width: 80%; */
+  margin: 0 auto;
+  color: white;
+}
+
+.hero__text h1 {
+  line-height: 1;
+}
+
+.btn_free {
+  text-decoration: none;
+  background: var(--clr-blue);
+  padding: 1rem 3rem;
+  /* outline: none; */
+  width: 100%;
+  border: none;
+  color: white;
+  display: block;
+  margin: 3rem 0 2rem 0;
+  border-radius: 5px;
+  font-family: var(--ff-poppins);
+  box-shadow: 0px 5px 2px 2px #da6767;
+}
+
+input:focus {
+  border: 3px solid #a8a8a8;
+}
+
+.form_header {
+  font-weight: 700;
+}
+
+form {
+  background: white;
+  display: block;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 2px 2px #da6767;
+}
+
+input {
+  width: 100%;
+  /* border: none; */
+  outline: none;
+  padding: 1rem;
+  margin: 0.15rem;
+  font-family: var(--ff-poppins);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  border-radius: 5px;
+  margin: 0.4rem;
+}
+
+.error-message {
+  color: red;
+  margin-left: 0.45rem;
+  text-align: right;
+  font-style: italic;
+  font-size: var(--fs-small);
+}
+
+.btn_free_trial {
+  /* display: block; */
+  width: 100%;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  line-height: 2;
+  background: var(--clr-green);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-family: var(--ff-poppins);
+  /* font-size: 0.35rem; */
+  font-weight: 500;
+  letter-spacing: 0px;
+  box-shadow: 0px 3px 3px 3px #3ca97a;
+  cursor: pointer;
+  margin: 0.4rem;
+}
+
+.btn_free_trial:hover {
+  opacity: 80%;
+}
+
+.form_paragraph {
+  text-align: center;
+  color: var(--clr-grayish-blue);
+}
+
+.paragraph_under {
+  color: var(--clr-red);
+  font-weight: 600;
+}
+.input-container {
+  position: relative;
+}
+
+.error-icon {
+  position: absolute;
+  top: 40%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  visibility: hidden;
+}
+
+.input-container.error input {
+  border: 3px solid var(--clr-red); /* Set border color to red in error state */
+}
+
+.input-container.error .error-message {
+  color: var(--clr-red);
+  font-weight: 600;
+}
+
+.error-value {
+  color: var(--clr-red);
+  font-weight: 600;
+  margin-left: 0.45rem;
+  /* text-align: right; */
+  /* font-style: italic; */
+  font-size: var(--fs-small);
+}
+
+/* Media Queries */
+@media (min-width: 800px) {
+  body {
+    background: url(images/bg-intro-desktop.png) var(--clr-red);
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .hero__text {
+    width: 50%;
+    padding: 0;
+  }
+
+  .hero__text h1 {
+    width: 70%;
+    margin-top: 15rem;
+    font-size: 3rem;
+  }
+  .hero__text p {
+    width: 80%;
+    margin: 2rem;
+    text-align: left;
+  }
+  .form__side {
+    width: 50%;
+  }
+
+  .btn_free_trial {
+    font-size: 1rem;
+  }
+}
