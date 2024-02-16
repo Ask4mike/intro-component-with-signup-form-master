@@ -88,6 +88,7 @@ input {
   font-size: var(--fs-small);
   border-radius: 5px;
   margin: 0.4rem;
+  border-color: #a8a8a8;
 }
 
 .error-message {
@@ -182,7 +183,7 @@ input {
   }
   .hero__text p {
     width: 80%;
-    margin: 2rem;
+    margin: 0.35rem;
     text-align: left;
   }
   .form__side {
