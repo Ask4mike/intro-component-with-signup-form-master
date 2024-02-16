@@ -17,7 +17,7 @@ This is a solution to the [Intro component with signup challenge on Frontend Men
 
 ### Screenshot
 
-![](/intro-component-with-signup-form-master/Intro-component-with-signup-form.png)
+[The link to the live site](https://intro-component-with-signup-form-master-git-master-mikesmith.vercel.app/)
 
 ## My process
 
